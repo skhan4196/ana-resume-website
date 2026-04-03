@@ -815,6 +815,197 @@ a { color: inherit; }
     color: var(--green-800);
 }
 
+/* ===== Nature Decorations ===== */
+.section-nature {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero trees */
+.hero-tree {
+    position: absolute;
+    color: var(--green-300);
+    pointer-events: none;
+    z-index: 2;
+}
+.hero-tree-left {
+    width: 160px;
+    bottom: 20px;
+    left: 3%;
+}
+.hero-tree-right {
+    width: 130px;
+    bottom: 20px;
+    right: 5%;
+}
+.hero-tree-far {
+    width: 100px;
+    bottom: 20px;
+    right: 18%;
+    opacity: .6;
+}
+
+/* Hero flowers */
+.hero-flower {
+    position: absolute;
+    color: var(--green-200);
+    pointer-events: none;
+    z-index: 2;
+    animation: float-flower 6s ease-in-out infinite;
+}
+.hero-flower-1 {
+    width: 50px;
+    top: 22%;
+    left: 8%;
+    color: #f4a7c1;
+}
+.hero-flower-2 {
+    width: 38px;
+    bottom: 28%;
+    right: 10%;
+    color: #c9a0dc;
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.hero-flower-3 {
+    width: 30px;
+    top: 55%;
+    left: 15%;
+    color: #f9e0a2;
+    animation-delay: -4s;
+    animation-duration: 8s;
+}
+
+@keyframes float-flower {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(8deg); }
+}
+
+/* Section decorative flowers */
+.deco-flower {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-flower-top-right {
+    width: 100px;
+    top: 2rem;
+    right: 3%;
+    animation: float-flower 8s ease-in-out infinite;
+}
+
+/* Branches with blossoms */
+.deco-branch {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-branch-left {
+    width: 80px;
+    top: 10%;
+    left: 1%;
+}
+
+/* Trees in sections */
+.deco-tree {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-tree-right {
+    width: 140px;
+    top: 0;
+    right: 0;
+}
+.deco-tree-left-sm {
+    width: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+/* Wildflower rows */
+.deco-wildflowers {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-wildflowers-left {
+    width: 200px;
+    bottom: 0;
+    left: 2%;
+}
+
+/* Vine with flowers */
+.deco-vine {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-vine-right {
+    width: 90px;
+    top: 0;
+    right: 1%;
+}
+
+/* Scattered petals */
+.deco-petals {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-petals-scatter {
+    width: 280px;
+    top: 5%;
+    left: 2%;
+    animation: drift-petals 12s ease-in-out infinite;
+}
+
+@keyframes drift-petals {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    33% { transform: translateX(8px) translateY(-5px); }
+    66% { transform: translateX(-5px) translateY(3px); }
+}
+
+/* Pine trees */
+.deco-pine {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-pine-right {
+    width: 70px;
+    bottom: 0;
+    right: 3%;
+}
+
+/* Flower bouquets */
+.deco-bouquet {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+.deco-bouquet-left {
+    width: 130px;
+    bottom: 0;
+    left: 2%;
+}
+.deco-bouquet-right {
+    width: 130px;
+    bottom: 0;
+    right: 2%;
+}
+
+/* Hide decorations on small screens to keep it clean */
+@media (max-width: 900px) {
+    .hero-tree, .hero-flower,
+    .deco-flower, .deco-branch,
+    .deco-tree, .deco-wildflowers,
+    .deco-vine, .deco-petals,
+    .deco-pine, .deco-bouquet {
+        display: none;
+    }
+}
+
 /* ===== Footer ===== */
 .footer {
     background: var(--green-950);
